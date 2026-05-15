@@ -5,36 +5,36 @@ export default function Hero() {
   const { t } = useLang();
   return (
     <section className="relative overflow-hidden">
-      <div className="container-x pt-20 pb-24 md:pt-28 md:pb-32">
+      <div className="container-x pt-14 pb-20 sm:pt-20 sm:pb-24 md:pt-28 md:pb-32">
         <div className="max-w-3xl">
-          <p className="fade-up text-clay text-sm tracking-[0.18em] uppercase mb-6">
+          <p className="fade-up text-clay text-xs sm:text-sm tracking-[0.16em] sm:tracking-[0.18em] uppercase mb-4 sm:mb-6">
             {t.hero_kicker}
           </p>
           <h1
-            className="fade-up text-5xl md:text-7xl text-ink whitespace-pre-line"
+            className="fade-up text-[1.875rem] xs:text-[2.25rem] leading-[1.12] sm:text-5xl md:text-6xl lg:text-7xl text-ink whitespace-pre-line"
             style={{ animationDelay: "0.08s" }}
           >
             {t.hero_title}
           </h1>
           <p
-            className="fade-up mt-8 text-lg md:text-xl text-ink-soft max-w-2xl leading-relaxed"
+            className="fade-up mt-5 sm:mt-8 text-base sm:text-lg md:text-xl text-ink-soft max-w-2xl leading-relaxed"
             style={{ animationDelay: "0.16s" }}
           >
             {t.hero_sub}
           </p>
           <div
-            className="fade-up mt-10 flex flex-wrap items-center gap-4"
+            className="fade-up mt-8 sm:mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4"
             style={{ animationDelay: "0.24s" }}
           >
             <Link
               to="/start"
-              className="px-7 py-3.5 rounded-full bg-ink text-paper text-base hover:bg-clay transition-colors"
+              className="px-7 py-3.5 rounded-full bg-ink text-paper text-base text-center hover:bg-clay transition-colors"
             >
               {t.hero_cta}
             </Link>
             <a
               href="#tariffs"
-              className="px-7 py-3.5 rounded-full border border-ink/20 text-ink text-base hover:border-clay hover:text-clay transition-colors"
+              className="px-7 py-3.5 rounded-full border border-ink/20 text-ink text-base text-center hover:border-clay hover:text-clay transition-colors"
             >
               {t.hero_cta2}
             </a>

@@ -16,13 +16,13 @@ export default function Tariffs() {
 
   return (
     <section id="tariffs" className="border-t border-line">
-      <div className="container-x py-24 md:py-32">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl text-ink">{t.tariffs_title}</h2>
-          <p className="mt-4 text-ink-soft text-lg">{t.tariffs_sub}</p>
+      <div className="container-x py-16 sm:py-24 md:py-32">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-ink">{t.tariffs_title}</h2>
+          <p className="mt-3 sm:mt-4 text-ink-soft text-base sm:text-lg">{t.tariffs_sub}</p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5 sm:gap-6">
           {ORDER.map((id) => {
             const tf = TARIFFS[id];
             const opt =
@@ -32,7 +32,7 @@ export default function Tariffs() {
             return (
               <div
                 key={id}
-                className={`relative rounded-2xl border p-8 md:p-10 flex flex-col ${
+                className={`relative rounded-2xl border p-6 sm:p-8 md:p-10 flex flex-col ${
                   isPop
                     ? "border-clay bg-paper shadow-[0_8px_40px_-12px_rgba(185,96,58,0.25)]"
                     : "border-line bg-paper"
@@ -48,9 +48,9 @@ export default function Tariffs() {
                 </div>
                 <p className="mt-1 text-sm text-muted">{tf.tagline[lang]}</p>
 
-                <div className="mt-7">
+                <div className="mt-6 sm:mt-7">
                   <div className="flex items-end gap-2">
-                    <span className="font-serif text-5xl text-ink">
+                    <span className="font-serif text-4xl sm:text-5xl text-ink">
                       {fmtPrice(monthly)}
                     </span>
                     <span className="text-muted mb-2 text-sm">

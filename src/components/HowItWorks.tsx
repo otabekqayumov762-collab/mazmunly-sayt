@@ -10,16 +10,16 @@ export default function HowItWorks() {
   ];
   return (
     <section id="how" className="border-t border-line bg-paper-deep/40">
-      <div className="container-x py-24 md:py-32">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl text-ink">{t.how_title}</h2>
-          <p className="mt-4 text-ink-soft text-lg">{t.how_sub}</p>
+      <div className="container-x py-16 sm:py-24 md:py-32">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-ink">{t.how_title}</h2>
+          <p className="mt-3 sm:mt-4 text-ink-soft text-base sm:text-lg">{t.how_sub}</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-px bg-line rounded-2xl overflow-hidden border border-line">
+        <div className="grid sm:grid-cols-3 gap-px bg-line rounded-2xl overflow-hidden border border-line">
           {steps.map((s) => (
             <div
               key={s.n}
-              className="bg-paper p-10 md:p-12 flex flex-col"
+              className="bg-paper p-7 sm:p-8 md:p-12 flex flex-col"
             >
               <div className="flex items-center justify-between">
                 <span className="w-12 h-12 rounded-full border border-clay/40 flex items-center justify-center text-clay">

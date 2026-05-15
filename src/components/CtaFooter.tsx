@@ -6,13 +6,13 @@ export default function CtaFooter() {
   return (
     <>
       <section className="border-t border-line bg-ink text-paper">
-        <div className="container-x py-24 md:py-32 text-center">
-          <h2 className="text-4xl md:text-6xl whitespace-pre-line text-paper">
+        <div className="container-x py-16 sm:py-24 md:py-32 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl whitespace-pre-line text-paper">
             {t.cta_title}
           </h2>
           <Link
             to="/start"
-            className="inline-flex mt-10 px-8 py-4 rounded-full bg-clay text-paper text-lg hover:bg-paper hover:text-ink transition-colors"
+            className="inline-flex mt-8 sm:mt-10 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full bg-clay text-paper text-base sm:text-lg hover:bg-paper hover:text-ink transition-colors"
           >
             {t.cta_btn}
           </Link>

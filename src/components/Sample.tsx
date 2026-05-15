@@ -5,17 +5,17 @@ export default function Sample() {
   const { t } = useLang();
   return (
     <section id="sample" className="border-t border-line bg-paper-deep/40">
-      <div className="container-x py-24 md:py-32 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container-x py-16 sm:py-24 md:py-32 grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
         <div>
-          <h2 className="text-4xl md:text-5xl text-ink">{t.sample_title}</h2>
-          <p className="mt-5 text-ink-soft text-lg leading-relaxed max-w-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-ink">{t.sample_title}</h2>
+          <p className="mt-4 sm:mt-5 text-ink-soft text-base sm:text-lg leading-relaxed max-w-lg">
             {t.sample_sub}
           </p>
         </div>
 
         {/* kitob sahifasi maketi */}
         <div className="flex justify-center">
-          <div className="w-full max-w-[380px] aspect-[3/4] bg-paper border border-line rounded-sm shadow-[0_20px_60px_-20px_rgba(28,26,23,0.3)] p-10 md:p-12 flex flex-col">
+          <div className="w-full max-w-[340px] sm:max-w-[380px] aspect-[3/4] bg-paper border border-line rounded-sm shadow-[0_20px_60px_-20px_rgba(28,26,23,0.3)] p-7 sm:p-10 md:p-12 flex flex-col">
             <span className="text-clay/50">
               <Icon name="quote" size={28} strokeWidth={1.25} />
             </span>

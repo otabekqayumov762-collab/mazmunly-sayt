@@ -13,6 +13,9 @@
 
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
+
+  /* iPhone 4/SE 320px = base; xs = 375px (iPhone X+) */
+  --breakpoint-xs: 375px;
 }
 
 @layer base {
@@ -68,8 +71,20 @@
     width: 100%;
     max-width: 1180px;
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    padding-inline: 1rem;
   }
+  @media (min-width: 400px) {
+    .container-x { padding-inline: 1.25rem; }
+  }
+  @media (min-width: 640px) {
+    .container-x { padding-inline: 1.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .container-x { padding-inline: 2rem; }
+  }
+  /* iPhone 4/SE (320px) — eng kichik: hech narsa toshib chiqmasin */
+  html, body { overflow-x: hidden; max-width: 100vw; }
+  h1, h2, h3 { overflow-wrap: break-word; }
   .divider-dots::after {
     content: "•  •  •";
     display: block;

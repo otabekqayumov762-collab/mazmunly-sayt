@@ -82,10 +82,10 @@ export default function Onboarding() {
         </div>
       </div>
 
-      <div className="flex-1 container-x py-14 md:py-20 max-w-xl w-full">
+      <div className="flex-1 container-x py-10 sm:py-14 md:py-20 max-w-xl w-full">
         {step === "lang" && (
           <div className="fade-up">
-            <h1 className="text-4xl text-ink mb-8">{t.ob_lang_t}</h1>
+            <h1 className="text-3xl sm:text-4xl text-ink mb-6 sm:mb-8">{t.ob_lang_t}</h1>
             <div className="grid grid-cols-2 gap-4">
               {(["uz", "ru"] as Lang[]).map((l) => (
                 <button
@@ -110,7 +110,7 @@ export default function Onboarding() {
 
         {step === "target" && (
           <div className="fade-up">
-            <h1 className="text-4xl text-ink mb-8">{t.ob_target_t}</h1>
+            <h1 className="text-3xl sm:text-4xl text-ink mb-6 sm:mb-8">{t.ob_target_t}</h1>
             <div className="grid grid-cols-2 gap-4">
               {targets.map(([id, label]) => (
                 <button
@@ -135,7 +135,7 @@ export default function Onboarding() {
 
         {step === "profile" && (
           <div className="fade-up">
-            <h1 className="text-4xl text-ink mb-8">{t.ob_profile_t}</h1>
+            <h1 className="text-3xl sm:text-4xl text-ink mb-6 sm:mb-8">{t.ob_profile_t}</h1>
             <div className="space-y-5">
               <Field label={t.ob_name}>
                 <input
@@ -208,7 +208,7 @@ export default function Onboarding() {
 
         {step === "tariff" && (
           <div className="fade-up">
-            <h1 className="text-4xl text-ink mb-8">{t.ob_pick_tariff}</h1>
+            <h1 className="text-3xl sm:text-4xl text-ink mb-6 sm:mb-8">{t.ob_pick_tariff}</h1>
             <div className="space-y-3">
               {(["tabiiy", "oson", "demo"] as TariffId[]).map((id) => {
                 const tf = TARIFFS[id];
@@ -258,7 +258,7 @@ export default function Onboarding() {
 
         {step === "pay" && selectedOpt && tariff && (
           <div className="fade-up">
-            <h1 className="text-4xl text-ink mb-2">{t.ob_pay_t}</h1>
+            <h1 className="text-3xl sm:text-4xl text-ink mb-2">{t.ob_pay_t}</h1>
             <p className="text-ink-soft mb-8">
               {TARIFFS[tariff].name} · {selectedOpt.duration} {t.months} ·{" "}
               <b>{fmtPrice(selectedOpt.price)}</b>
@@ -300,7 +300,7 @@ export default function Onboarding() {
             <div className="mx-auto mb-7 w-20 h-20 rounded-full border border-clay flex items-center justify-center text-clay">
               <Icon name="check" size={36} strokeWidth={1.5} />
             </div>
-            <h1 className="text-4xl text-ink">{t.ob_done_t}</h1>
+            <h1 className="text-3xl sm:text-4xl text-ink">{t.ob_done_t}</h1>
             <p className="mt-4 text-ink-soft text-lg max-w-sm mx-auto">
               {t.ob_done_d}
             </p>
