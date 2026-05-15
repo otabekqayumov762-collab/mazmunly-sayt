@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useLang } from "../lib/LangContext";
 import type { Lang } from "../lib/i18n";
 import { TARIFFS, fmtPrice, type TariffId } from "../lib/tariffs";
+import Icon from "../components/Icon";
 
 type Target = "self" | "father" | "mother" | "gift";
 
@@ -93,13 +94,14 @@ export default function Onboarding() {
                     setLang(l);
                     go("target");
                   }}
-                  className={`py-8 rounded-2xl border text-lg transition-colors ${
+                  className={`py-8 rounded-2xl border text-lg flex flex-col items-center gap-3 transition-colors ${
                     lang === l
-                      ? "border-clay bg-paper-deep"
-                      : "border-line hover:border-ink"
+                      ? "border-clay bg-paper-deep text-clay"
+                      : "border-line hover:border-ink text-ink"
                   }`}
                 >
-                  {l === "uz" ? "🇺🇿 O'zbekcha" : "🇷🇺 Русский"}
+                  <Icon name="globe" size={28} strokeWidth={1.25} />
+                  {l === "uz" ? "O'zbekcha" : "Русский"}
                 </button>
               ))}
             </div>
@@ -295,7 +297,9 @@ export default function Onboarding() {
 
         {step === "done" && (
           <div className="fade-up text-center py-10">
-            <div className="text-6xl mb-6">✦</div>
+            <div className="mx-auto mb-7 w-20 h-20 rounded-full border border-clay flex items-center justify-center text-clay">
+              <Icon name="check" size={36} strokeWidth={1.5} />
+            </div>
             <h1 className="text-4xl text-ink">{t.ob_done_t}</h1>
             <p className="mt-4 text-ink-soft text-lg max-w-sm mx-auto">
               {t.ob_done_d}
