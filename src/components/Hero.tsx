@@ -1,23 +1,24 @@
 import { Link } from "react-router-dom";
 import { useLang } from "../lib/LangContext";
+import Hero3DBook from "./Hero3DBook";
 
 export default function Hero() {
   const { t } = useLang();
   return (
     <section className="relative overflow-hidden">
-      <div className="container-x pt-14 pb-20 sm:pt-20 sm:pb-24 md:pt-28 md:pb-32">
-        <div className="max-w-3xl">
+      <div className="container-x pt-12 pb-16 sm:pt-16 sm:pb-24 md:pt-24 md:pb-32 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-8 items-center">
+        <div className="max-w-2xl">
           <p className="fade-up text-clay text-xs sm:text-sm tracking-[0.16em] sm:tracking-[0.18em] uppercase mb-4 sm:mb-6">
             {t.hero_kicker}
           </p>
           <h1
-            className="fade-up text-[1.875rem] xs:text-[2.25rem] leading-[1.12] sm:text-5xl md:text-6xl lg:text-7xl text-ink whitespace-pre-line"
+            className="fade-up text-[1.875rem] xs:text-[2.25rem] leading-[1.12] sm:text-5xl md:text-6xl lg:text-[4.25rem] text-ink whitespace-pre-line"
             style={{ animationDelay: "0.08s" }}
           >
             {t.hero_title}
           </h1>
           <p
-            className="fade-up mt-5 sm:mt-8 text-base sm:text-lg md:text-xl text-ink-soft max-w-2xl leading-relaxed"
+            className="fade-up mt-5 sm:mt-8 text-base sm:text-lg md:text-xl text-ink-soft max-w-xl leading-relaxed"
             style={{ animationDelay: "0.16s" }}
           >
             {t.hero_sub}
@@ -46,19 +47,13 @@ export default function Hero() {
             {t.hero_note}
           </p>
         </div>
-      </div>
 
-      {/* dekorativ kitob silueti */}
-      <div className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 hidden lg:block opacity-[0.07]">
-        <div className="w-[420px] h-[560px] rounded-r-2xl border-[3px] border-ink relative">
-          <div className="absolute inset-y-6 left-6 right-10 border-l border-ink/40" />
-          {[...Array(7)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute left-16 right-12 border-t border-ink/30"
-              style={{ top: `${14 + i * 11}%` }}
-            />
-          ))}
+        {/* Interaktiv 3D kitob — sichqonchaga javob beradi */}
+        <div
+          className="fade-up h-[340px] sm:h-[420px] lg:h-[480px]"
+          style={{ animationDelay: "0.32s" }}
+        >
+          <Hero3DBook />
         </div>
       </div>
     </section>
