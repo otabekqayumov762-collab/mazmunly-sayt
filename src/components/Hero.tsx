@@ -5,7 +5,7 @@ import Hero3DBook from "./Hero3DBook";
 export default function Hero() {
   const { t } = useLang();
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       <div className="container-x pt-12 pb-16 sm:pt-16 sm:pb-24 md:pt-24 md:pb-32 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-8 items-center">
         <div className="max-w-2xl">
           <p className="fade-up text-clay text-xs sm:text-sm tracking-[0.16em] sm:tracking-[0.18em] uppercase mb-4 sm:mb-6">
